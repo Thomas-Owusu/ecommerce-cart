@@ -7,8 +7,8 @@ class CustomTextFormField extends StatelessWidget {
 
   final String hint;
 
-final FormFieldSetter<String>? onSave;
-final FormFieldValidator<String>? validator;
+  final FormFieldSetter<String>? onSave;
+  final FormFieldValidator<String>? validator;
 
   const CustomTextFormField({
     Key? key, 
@@ -36,6 +36,20 @@ final FormFieldValidator<String>? validator;
               color: Colors.black,
             ),
             fillColor: Colors.white,
+            filled: true,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide(color: Colors.grey, width: 1),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide(color: Colors.grey, width: 1),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide(color: Colors.grey, width: 2),
+            ),
+            contentPadding: EdgeInsets.symmetric(vertical: 18, horizontal: 24),
           ),
         )
       ],
