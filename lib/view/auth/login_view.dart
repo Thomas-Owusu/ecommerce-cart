@@ -65,7 +65,7 @@ class LoginView extends GetWidget<AuthViewModel> {
                 height: 30,
               ),
               CustomTextFormField(
-                text: 'Email',
+                labelText: 'Email',
                 hint: 'Enter your email',
                 onSave: (value) {
                   controller.email = value!;
@@ -80,7 +80,7 @@ class LoginView extends GetWidget<AuthViewModel> {
                 height: 40,
               ),
               CustomTextFormField(
-                text: 'Password',
+                labelText: 'Password',
                 hint: 'Enter your password',
                 onSave: (value) {
                   controller.password = value!;

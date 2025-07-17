@@ -46,8 +46,8 @@ class RegisterView extends GetWidget<AuthViewModel> {
                 height: 30,
               ),
               CustomTextFormField(
-                text: 'Name',
-                hint: 'thom',
+                labelText: 'Name',
+                hint: 'Enter your name',
                 onSave: (value) {
                   controller.name = value!;
                 },
@@ -61,7 +61,7 @@ class RegisterView extends GetWidget<AuthViewModel> {
                 height: 30,
               ),
               CustomTextFormField(
-                text: 'Email',
+                labelText: 'Email',
                 hint: 'Enter your email',
                 onSave: (value) {
                   controller.email = value!;
@@ -76,7 +76,7 @@ class RegisterView extends GetWidget<AuthViewModel> {
                 height: 40,
               ),
               CustomTextFormField(
-                text: 'Password',
+                labelText: 'Password',
                 hint: 'Enter your password',
                 onSave: (value) {
                   controller.password = value!;

@@ -3,17 +3,15 @@ import 'package:flutter/material.dart';
 import 'custom_text.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  final String text;
-
   final String hint;
-
+  final String labelText;
   final FormFieldSetter<String>? onSave;
   final FormFieldValidator<String>? validator;
 
   const CustomTextFormField({
-    Key? key, 
-    required this.text,
+    Key? key,
     required this.hint,
+    required this.labelText,
     required this.onSave,
     required this.validator,
   }) : super(key: key);
@@ -22,15 +20,12 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomText(
-          text: text,
-          fontSize: 14,
-          color: Colors.grey.shade900, maxLine: 2,
-        ),
         TextFormField(
           onSaved: onSave,
           validator: validator,
           decoration: InputDecoration(
+            labelText: labelText,
+            floatingLabelBehavior: FloatingLabelBehavior.always,
             hintText: hint,
             hintStyle: const TextStyle(
               color: Colors.black,
